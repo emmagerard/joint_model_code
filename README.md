@@ -1,6 +1,6 @@
-# Implementation of the method to determine the maximal tolerated dose-sequence using PK/PD
+# Implementation of the method to determine the maximal tolerated dose-regimen using PK/PD
 
-This is the code for the paper "Dose-finding Bayesian hierarchical esign for toxicity-schedule assessment using pharmacokinetics and pharmacodynamics" authored by Emma Gerard, Sarah Zohar, Hoai-Thu Thai, Christelle Lorenzato, Marie-Karelle Riviere and Moreno Ursino. 
+This is the code for the paper "Bayesian dose-regimen assessment in early phase oncology incorporating pharmacokinetics and pharmacodynamics" authored by Emma Gerard, Sarah Zohar, Hoai-Thu Thai, Christelle Lorenzato, Marie-Karelle Riviere and Moreno Ursino. 
 
 ## Prerequisite
 
@@ -13,12 +13,12 @@ Bayesian analysis is performed with Stan via the package `rstan` (https://github
 
 ### Tools folder
 
-The tools folder contains every generic functions used for the simulations:
+The tools folder contains all generic functions used for the simulations:
   - `pk_functions.R` contains all PK/PD functions and functions to generate PK/PD data  
   - `scenario_functions.R` contains the functions to define the toxicity scenarios
   - `simu_Rmax.R` contains the functions to simulate the PD response for a large number of patients to define the toxicity scenarios
   - `simu_trials_PKPD.R` contains the functions to simulate the data under either the 3+3 or the CRM design and estimate the PKPD models with Monolix
-  - `simu_trials_stat.R` contains the functions to extract PK/PD estimates and fit the statistical models on each dataset to estimate the probability of toxicity at each dose-sequence
+  - `simu_trials_stat.R` contains the functions to extract PK/PD estimates and fit the statistical models on each dataset to estimate the probability of toxicity at each dose-regimen
   - `stan_functions.R` contains the functions to initialize parameters for Stan and other useful generic functions
   
 ### Scenario folder
